@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/tablet.css">
     <link rel="stylesheet" href="css/desktops.css">
     <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
@@ -15,7 +15,15 @@
         <div class="header-container">
             <nav class="main-header-nav">
                 <a href="index.html" class="logo">Web<span class="header-logo">Studio</span></a>
-                     <ul class="nav-items">
+                <button
+                class="menu-toggle js-open-menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+              >
+                <img src="/images/icon/menu.svg">
+              </button>  
+
+                <ul class="nav-items">
                          <li class="main-header-nav-item">
                             <a class="main-header-nav-link" href="index.html">Studio</a></li>
                         <li class="main-header-nav-item">
@@ -219,5 +227,70 @@
             </button>
         </div>
     </footer>
+
+    <!-- MOBILE MENU -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+            <img src="images/close-button.svg" alt="close-button">
+        </button>
+        
+        <div class="mobile-item-container">
+                <ul class="nav-items">
+                    <li class="main-header-nav-item">
+                    <a class="main-header-nav-link active" href="index.html">Studio</a></li>
+                <li class="main-header-nav-item">
+                    <a class="main-header-nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="main-header-nav-item">
+                    <a class="main-header-nav-link"  href="/">Contacts</a></li>
+            </ul>
+            <address class="address-container">
+                <ul class="nav-address">
+                    <li class="main-header-nav-address-link">
+                        <a class="main-header-nav-address mobile-link-number" href="tel:+11(000)111-11-11">+11 (000) 111-11-11</a></li>                       
+                    <li class="main-header-nav-address-link">
+                        <a class="main-header-nav-address mobile-link-address" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                </ul>
+            </address> 
+        </div>
+        <div class="mobile-socials">
+            <ul class="our-team-link">
+                <li class="our-team-link-item">
+                    <a href="/" class="team-socials">
+                        <svg class="social-icons">
+                            <use href="images/icon.svg#icon-instagram-2" class="icons"></use>
+                        </svg>
+                    </a>
+                </li>
+            
+                <li class="our-team-link-item">
+                    <a href="/" class="team-socials">
+                        <svg class="social-icons">
+                            <use href="images/icon.svg#icon-twitter-1" class="icons"></use>
+                        </svg>
+                    </a>
+                </li>
+            
+                <li class="our-team-link-item">
+                    <a href="/" class="team-socials">
+                    <svg class="social-icons">
+                        <use href="images/icon.svg#icon-facebook-1" class="icons"></use>
+                    </svg>
+                </a>
+            </li>
+    
+            <li class="our-team-link-item">
+                <a href="/" class="team-socials">
+                    <svg class="social-icons">
+                        <use href="images/icon.svg#icon-linkedin-1" class="icons"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        </div>
+    </div>
+     
+
+
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

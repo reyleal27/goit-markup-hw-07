@@ -1,13 +1,38 @@
-@media screen and (min-width: 1200px) {
-    .mobile-menu{
+@media screen and (min-width:1200px) {
+    .menu-toggle{
         display: none;
     }
     
+    .main-header{
+        display: flex;
+        align-items: center;
+        height: 70px;
+        border-bottom: 1px solid var(--cornflower);
+        width: 100%;
+    }
+
+    .header-container.mobile-menu{
+      display: none;
+    }
+   
+    .header-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1158px;
+        margin: 0 auto;
+        padding: 0 15px 0 15px;
+    }
+
+    .mobile-socials{
+        opacity: 0;;
+    }
     .nav-items{
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 40px;
+        
     }
    
     .nav-address{
@@ -22,11 +47,14 @@
         position: relative;
     }
     
-  
+  .mobile-toggle{
+    display: none;
+  }
 
     /* GENERIC AUXILIARY CLASS */
 .container{
     width: 1158px;
+    margin: 0 auto;
     padding: 0 15px;
 }
 
@@ -37,10 +65,10 @@
 
 /*HERO SECTION*/
 
-    .hero-section { 
-        background-image:linear-gradient(rgba(46,46,46,0.7),rgba(46,47,46,0.7)), url(../images/hero/desktop-hero.jpg);
-        width: 1440px;
-    }
+.hero-section{
+    background-image: linear-gradient(rgba(46,46,46,0.7),rgba(46,47,46,0.7)), url(../images/hero/desktop-hero.jpg);
+    width: 100%;
+}
 
     .hero-title{
         font-size: 56px;
@@ -48,6 +76,8 @@
         width: 496px;
         line-height: 1.07;
         letter-spacing: 1.12px;
+        text-align: center;
+        margin: auto;
     }
 
     .button{
@@ -67,12 +97,6 @@
     width: 264px;
     height: 112px;
 }
-.advantages-icons{
-    display: block;
-   width: 64px;
-   height: 64px;
-}
-
   
 .icons{
    position: relative;
@@ -83,11 +107,12 @@
 .feature{
     background-color: var(--white);
 }
-.feature-list{
-   display: flex;
-   flex-direction: row;
+.feature .container .feature-list{
+    display: flex;
    flex-wrap: wrap;
+   flex-direction: row;
    gap: 24px;
+   width: 1128px;
 }
 
 .feature-item{
@@ -155,12 +180,13 @@
     padding-bottom: 0;;
 }
 .footer-section .container{
-    display: block;
-    width: 264px;
-    margin-left:156px;
+    display: flex;
+    flex-direction: row;
+    width: 1158px;
+}
+.logo-description{
     margin-right: 120px;
 }
-
 .footer-description{
     padding-top: 16px;
     font-size: 16px;

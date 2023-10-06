@@ -1,11 +1,34 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+   .menu-toggle{
+    display: none;
+   }
+   
+    .hero-section{
+    background-image: url(../images/hero/tablet.jpg);
+   }
+   
+   .header-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0 15px 0 15px;
+}
     .nav-items{
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 40px;
+        width: 261px;
+        margin-left: 120px;
+        padding-left: 0;
     }
 
+    /*ADDRESS NAV*/
+
+.nav-address{
+    display: block;
+}
     .main-header-nav-address-link{
     list-style: none;
     position: relative;
@@ -14,11 +37,82 @@
     .main-header{
         height: 72px;
     }
-    
-    .hero-section { 
-        background-image:linear-gradient(rgba(46,46,46,0.7),rgba(46,47,46,0.7)), url(../images/hero/tablet.jpg);
-        width: 768px;
-        height: 438px;
+
+    .main-header-nav-address-link{
+        opacity: 1;
     }
     
+    /* HERO SECTION */
+    .hero-section { 
+        background-image:linear-gradient(rgba(46,46,46,0.7),rgba(46,47,46,0.7)), url(../images/hero/tablet.jpg);
+    }
+
+    .hero-title{
+        width: 496px;
+        height: 120px;
+        color: var(--WHITE, #FFF);
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.07; 
+        letter-spacing: 1.12px;
+        margin-top: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* GENERIC AUXILIARY CLASS */
+.container{
+    width: 720px;
+}
+
+ /*FEATURE SECTION*/
+
+ .feature-list{
+    flex-direction: row;
+    width: 736px;
+    align-items: left;
+    gap:24px;
+    row-gap: 72px;
+    height: 312px;
+ }
+ .feature-description{
+    width: 356px;
+ }
+ .feature-item{
+    flex-basis: calc((100% - 24px)/2);
+ }
+/*TEAM CONTAINER*/
+    .team-ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap:30px;
+    }
+    .team-images img{
+        width: calc(100%-30px)/2;
+    }
+
+    /* FOOTER */
+.footer-section .container{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap:24px;
+}
+.footer-newsletter{
+    flex-direction: row;
+    position: relative;
+    left: -20px;
+    gap:24px;
+}
+.footer-newsletter h5 {
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+.email-box{
+    width: 264px;
+}
 }
